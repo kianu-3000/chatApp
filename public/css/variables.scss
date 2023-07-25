@@ -1,0 +1,33 @@
+:root{
+
+	--white: #FFFFFF;
+	--black: #000000;
+	--purple: #7e2ade;
+
+	// filters
+	--f-black: invert(0%) sepia(100%) saturate(7432%) hue-rotate(210deg) brightness(88%) contrast(115%);
+	--f-white: invert(98%) sepia(100%) saturate(9%) hue-rotate(198deg) brightness(103%) contrast(104%);
+	--f-purple: invert(16%) sepia(93%) saturate(5969%) hue-rotate(269deg) brightness(93%) contrast(87%);
+
+	// font size
+	--small: 0.8rem;
+	--normal: 1rem;
+	--medium: 1.5rem;
+	--large: 2rem;
+	--x-large: 2.5rem;
+}
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat';
+	color: var(--black);
+	outline: none;
+	border: none;
+}
+img{
+	width: var(--medium);
+	height: var(--medium);
+}
+

@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap");
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --purple: #7e2ade;
+  --f-black: invert(0%) sepia(100%) saturate(7432%) hue-rotate(210deg) brightness(88%) contrast(115%);
+  --f-white: invert(98%) sepia(100%) saturate(9%) hue-rotate(198deg) brightness(103%) contrast(104%);
+  --f-purple: invert(16%) sepia(93%) saturate(5969%) hue-rotate(269deg) brightness(93%) contrast(87%);
+  --small: 0.8rem;
+  --normal: 1rem;
+  --medium: 1.5rem;
+  --large: 2rem;
+  --x-large: 2.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+  color: var(--black);
+  outline: none;
+  border: none;
+}
+
+img {
+  width: var(--medium);
+  height: var(--medium);
+}
+
+.root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root .login-form {
+  background-color: var(--white);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 150, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 50%;
+  padding: var(--normal);
+  border-radius: var(--normal);
+}
+.root .login-form section:first-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--medium);
+}
+.root .login-form section:first-child span {
+  color: var(--purple);
+  font-weight: bolder;
+  font-size: var(--large);
+}
+.root .login-form section:first-child img {
+  width: var(--large);
+  height: var(--large);
+  filter: var(--f-black);
+  margin-right: var(--small);
+}
+.root .login-form section:last-child form {
+  display: flex;
+  flex-direction: column;
+}
+.root .login-form section:last-child form input {
+  font-size: var(--normal);
+  padding: var(--small) var(--x-large);
+  border: 1px solid var(--purple);
+  border-radius: var(--normal);
+  margin-bottom: var(--small);
+  text-align: center;
+}
+.root .login-form section:last-child form input:last-child {
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: bolder;
+  cursor: pointer;
+}
+.root .login-form section:last-child .registration {
+  text-align: center;
+}
+.root .login-form section:last-child .registration a {
+  color: var(--purple);
+  cursor: pointer;
+}
+.root .login-form section:last-child .registration a:hover {
+  text-decoration: underline;
+}
+.root .registration-form-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(126, 42, 222, 0.3);
+}
+.root .registration-form-container .registration-form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: var(--large);
+  border-radius: var(--small);
+  transform: translateY(-40%);
+  position: relative;
+}
+.root .registration-form-container .registration-form label {
+  text-align: center;
+  font-weight: bolder;
+  font-size: var(--medium);
+  margin-bottom: var(--small);
+}
+.root .registration-form-container .registration-form input {
+  font-size: var(--normal);
+  margin-bottom: var(--small);
+  border: 1px solid var(--black);
+  border-radius: var(--small);
+  padding: var(--small) var(--large);
+}
+.root .registration-form-container .registration-form button {
+  border-radius: var(--small);
+  padding: var(--small) var(--large);
+  cursor: pointer;
+  background-color: var(--purple);
+  color: var(--white);
+  font-weight: bolder;
+}
+.root .registration-form-container .registration-form .close-button {
+  position: absolute;
+  top: 2%;
+  left: 91%;
+  filter: var(--f-purple);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=login.css.map */

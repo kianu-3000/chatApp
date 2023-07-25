@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css/login/login.css">
+	<title>Login Page</title>
+</head>
+<body>
+	
+	<div class="root">
+		
+		<div class="login-form">
+			
+			<!-- Title Section -->
+			<section>
+
+				<img src="/img/chat-logo.svg">
+				<span>Chat App</span>
+
+			</section>
+
+			<!-- Form section -->
+			<section>
+
+				<form action="/auth/login" method="POST" id="form-login">
+					<input type="text" name="username" placeholder="Enter Username" required>	
+					<input type="password" name="password" placeholder="Enter Password" required>
+					<input type="submit" name="login" value="Login">	
+				</form>
+
+				<p class="registration">Don't have an account? <a id="reg-btn">register here</a> </p>
+
+			</section>
+
+		</div>
+
+		<div class="registration-form-container" id="registration-form-container">
+			
+			<form class="registration-form" id="registration-form" method="POST" action="/auth/registration">
+				<label>Account Creation</label>
+				<input type="text" name="username" placeholder="Enter username" required>
+				<input type="password" name="password" placeholder="Enter password" required>
+				<input type="password" name="confirmPassword" placeholder="Confirm password" required>
+				<button type="submit">Register</button>
+
+				<img src="/img/close.svg" class="close-button" id="close-button">
+			</form>
+
+		</div>
+
+	</div> <!-- end root div -->
+
+	<script type="text/javascript">
+
+		const registration_btn = document.getElementById('reg-btn');
+		const registration_form = document.getElementById('registration-form-container');
+		const close_btn = document.getElementById('close-button');
+
+		registration_btn.addEventListener('click', () =>{
+			registration_form.style.display = 'flex';
+		});
+		close_btn.addEventListener('click', () =>{
+			registration_form.style.display = 'none';
+		});
+
+	</script>
+
+</body>
+</html>

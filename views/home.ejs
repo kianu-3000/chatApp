@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css/home/home.css">
+	<title>Home Page</title>
+</head>
+<body>
+	
+	<div class="root">
+		
+		<div>
+			<!-- this is the title -->
+			<header>
+
+				<section>
+					<img src="/img/chat-logo.svg">
+					<span>Chat App</span>
+				</section>
+
+				<span>
+					<% if (user){%>
+						<%= user.username%>
+					<%} else {%>
+						no user
+					<%}%>
+
+				</span>
+
+				<a href="/auth/logout">Logout</a>
+			</header>
+
+			<!-- this is the main chat box -->
+			<main>
+				<section class="side-bar-container">
+					<header>
+						<nav class="room-title">
+							<img src="/img/room.svg">
+							<span>Room Name</span>
+						</nav>
+						<nav class="rooms">
+							<span>Global</span>
+						</nav>
+					</header>
+
+					<main>
+						<nav class="user-title">
+							<img src="/img/users.svg">
+							<span>Users</span>
+						</nav>
+						<nav class="users">
+							<% for (let i = 0; i < users.length; i++) {%>
+
+								<span><%=users[i].username%></span>
+
+							<% } %>
+							
+						</nav>
+					</main>
+				</section>
+
+				<section class="chat-box-container">
+					<main class="main" id="main-chat">
+						<!--
+						<section class="chat">
+							<p>Username <span>- 3:23 pm</span></p>
+							<p>Welcome to Chat!</p>
+						</section>
+						-->
+
+					</main>
+				</section>
+			</main>
+
+			<!-- this is the message bar -->
+			<footer>
+				<form id="chat-form">
+					<input type="text" name="message" placeholder="Enter message . . ." id="message">
+
+					<button id="send" class="send-button">
+						<span>Send</span>
+						<img src="/img/send.svg">
+					</button>
+
+				</form>
+			</footer>
+		</div>
+		
+
+	</div>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/main.js"></script>
+</body>
+</html>

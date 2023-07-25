@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap");
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --purple: #7e2ade;
+  --f-black: invert(0%) sepia(100%) saturate(7432%) hue-rotate(210deg) brightness(88%) contrast(115%);
+  --f-white: invert(98%) sepia(100%) saturate(9%) hue-rotate(198deg) brightness(103%) contrast(104%);
+  --f-purple: invert(16%) sepia(93%) saturate(5969%) hue-rotate(269deg) brightness(93%) contrast(87%);
+  --small: 0.8rem;
+  --normal: 1rem;
+  --medium: 1.5rem;
+  --large: 2rem;
+  --x-large: 2.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+  color: var(--black);
+  outline: none;
+  border: none;
+}
+
+img {
+  width: var(--medium);
+  height: var(--medium);
+}
+
+.root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root div {
+  width: 65%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--purple);
+  border-radius: var(--normal);
+  padding: var(--normal);
+  box-shadow: 0px 0px 20px 7px rgba(0, 0, 100, 0.3);
+}
+.root div header {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--large);
+  margin-bottom: var(--medium);
+}
+.root div header section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.root div header section span {
+  font-size: var(--large);
+  font-weight: bolder;
+  color: var(--white);
+}
+.root div header section img {
+  filter: var(--f-white);
+  width: var(--large);
+  height: var(--large);
+  margin-right: var(--small);
+}
+.root div header span {
+  font-size: var(--normal);
+  font-weight: bold;
+  color: var(--white);
+}
+.root div header a {
+  text-decoration: none;
+  font-weight: light;
+  color: var(--white);
+}
+.root div main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+.root div main section {
+  border-radius: var(--normal);
+  background-color: var(--white);
+}
+.root div main .side-bar-container {
+  flex-grow: 0;
+  margin-right: var(--small);
+  display: flex;
+  flex-direction: column;
+}
+.root div main .side-bar-container header {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.root div main .side-bar-container header .room-title {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--small) var(--large);
+  margin-bottom: var(--small);
+}
+.root div main .side-bar-container header .room-title img {
+  filter: var(--f-black);
+  width: var(--medium);
+  height: var(--medium);
+  margin-right: var(--small);
+}
+.root div main .side-bar-container header .room-title span {
+  font-size: var(--normal);
+  color: var(--black);
+}
+.root div main .side-bar-container header .rooms {
+  flex-grow: 1;
+}
+.root div main .side-bar-container header .rooms span {
+  background-color: #9383cc;
+  border-radius: var(--small);
+  padding: calc(var(--small) - 0.5rem) var(--x-large);
+  font-weight: normal;
+}
+.root div main .side-bar-container main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--purple);
+}
+.root div main .side-bar-container main .user-title {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--small) var(--large);
+}
+.root div main .side-bar-container main .user-title img {
+  filter: var(--f-black);
+  width: var(--medium);
+  height: var(--medium);
+  margin-right: var(--small);
+}
+.root div main .side-bar-container main .user-title span {
+  font-size: var(--normal);
+  font-weight: bold;
+}
+.root div main .side-bar-container main .users {
+  flex-grow: 1;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.root div main .side-bar-container main .users span {
+  text-align: center;
+  font-size: var(--normal);
+  font-weight: normal;
+  margin: 0 var(--large);
+  padding: calc(var(--small) - 0.5rem);
+  border-radius: var(--small);
+  border: 1px solid var(--black);
+  color: var(--black);
+  margin-bottom: var(--small);
+}
+.root div main .chat-box-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.root div main .chat-box-container .main {
+  flex-grow: 1;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  scrollbar-width: none;
+  scrollbar-height: none;
+  border-radius: var(--normal);
+  background-color: var(--white);
+  padding: var(--normal);
+}
+.root div main .chat-box-container .main .chat {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  border-radius: var(--small);
+  padding: var(--small);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--small);
+}
+.root div main .chat-box-container .main .chat p:first-child {
+  font-size: calc(var(--small) + 0rem);
+  font-weight: bold;
+  color: green;
+}
+.root div main .chat-box-container .main .chat p:first-child span {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: lighter;
+}
+.root div main .chat-box-container .main .chat p:last-child {
+  font-size: calc(var(--normal) + 0.1rem);
+  font-weight: normal;
+}
+.root div footer {
+  flex-grow: 0;
+  display: flex;
+  flex-direcion: row;
+  align-items: center;
+  padding: var(--normal);
+  background-color: var(--white);
+  border-radius: var(--small);
+  margin-top: var(--small);
+}
+.root div footer form {
+  flex-grow: 1;
+  display: flex;
+  flex-direcion: row;
+  align-items: center;
+}
+.root div footer form input {
+  flex-grow: 1;
+  padding: var(--small) var(--normal);
+  font-size: var(--normal);
+}
+.root div footer form button {
+  display: flex;
+  flex-direcion: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--small) var(--normal);
+  border-radius: var(--small);
+  background-color: #58e081;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.root div footer form button img {
+  filter: var(--f-white);
+}
+.root div footer form button span {
+  font-size: var(--normal);
+  margin-right: var(--normal);
+  font-weight: bold;
+  color: var(--white);
+}
+.root div footer form button:hover {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=home.css.map */
